@@ -8,7 +8,8 @@
 
 .title {
   font-weight: 600;
-  line-height: 20px;
+  font-size: 28px;
+  line-height: 28px;
 }
 
 .menu {
@@ -20,8 +21,8 @@
 
 .link {
   color: var(--dark-sea);
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 20px;
+  line-height: 20px;
   text-transform: capitalize;
 }
 

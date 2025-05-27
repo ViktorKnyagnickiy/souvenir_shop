@@ -1,126 +1,155 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Sofia+Sans:wght@300;500;700&display=swap);:root {
-  --bg: #212123;
-  --dark: #191919;
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;900&family=Sofia+Sans:wght@300;500;700&display=swap);
+
+:root {
+  --bg: #fff; /* Білий фон */
+  --dark: #fff;
   --dark-sea: #576067;
   --grey: #b8b8b8;
   --white: #fff;
-  --violet: #8b57c6;
-  --violet-dark: #6c3eb8;
-  --light: #f6f6f7;
-  --sea: #616e74
+  --violet: #4B2717;
+  --violet-dark: #4B2717;
+  --light: #576067;
+  --sea: #616e74;
+  --hover-color: #4B2717; /* Коричневий колір при наведенні */
 }
 
 body {
   background: var(--bg);
-  color: #fff;
-  font-family: Montserrat,Roboto,sans-serif;
+  color: #000; /* Чорний текст */
+  font-family: Montserrat, Roboto, sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 16px;
   margin: 0;
   overflow-x: hidden;
-  padding: 0 0 20px
+  padding: 0 0 20px;
+  transition: color 0.3s ease;
 }
 
-h1,h2,h3,h4,h5,h6,p {
+h1, h2, h3, h4, h5, h6, p {
   font-size: 16px;
   line-height: 24px;
   margin: 0;
-  padding: 0
+  padding: 0;
+  color: #000; /* Чорний текст */
 }
 
 * {
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 img {
   height: auto;
-  max-width: 100%
+  max-width: 100%;
 }
 
-button,input {
+button, input {
   background: none;
   border: none;
-  color: #fff;
-  font-family: Montserrat,Roboto,sans-serif;
+  color: #000; /* Чорний текст */
+  font-family: Montserrat, Roboto, sans-serif;
   font-size: 16px;
-  outline: none
+  outline: none;
+  transition: color 0.3s ease;
 }
 
 a {
-  color: #fff;
-  text-decoration: none
+  color: #000; /* Чорний текст */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-li,ul {
+a:hover,
+button:hover,
+input:hover {
+  color: var(--hover-color); /* Коричневий при наведенні */
+}
+
+li, ul {
   list-style: none;
   margin: 0;
-  padding: 0
+  padding: 0;
 }
 
 .app {
   margin: 0 auto;
-  width: 1274px
+  width: 1274px;
 }
 
 .flex {
-  display: flex
+  display: flex;
 }
 
 .flex-center {
   align-items: center;
-  justify-content: center
+  justify-content: center;
 }
 
 .icon {
   height: 12px;
-  width: 12px
+  width: 12px;
 }
 
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px
+  gap: 20px;
 }
 
 section {
-  background: var(--dark)
+  background: var(--bg); /* Білий фон */
+  border: 1px solid #ddd; /* Додав світлу рамку для розділів */
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Додав легку тінь */
+  transition: box-shadow 0.3s ease;
 }
 
-button,section {
-  border-radius: 6px
+section:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Легка тінь при наведенні */
 }
 
 button {
-  background: var(--violet-dark);
+  background: none;
   cursor: pointer;
   font-weight: 600;
   line-height: 20px;
-  padding: 9px 20px
+  padding: 9px 20px;
+  border: 1px solid #ddd; /* Світла рамка */
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 button:hover {
-  background: var(--violet)
+  color: var(--hover-color); /* Коричневий текст */
+  border-color: var(--hover-color); /* Коричнева рамка */
 }
 
 h2 {
   font-size: 20px;
   font-weight: 600;
   line-height: 24px;
-  text-align: center
+  text-align: center;
+  color: #000; /* Чорний текст */
 }
 
-input::-webkit-inner-spin-button,input::-webkit-outer-spin-button {
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
   -webkit-appearance: none;
-  margin: 0
+  margin: 0;
 }
 
 input[type=number] {
-  -moz-appearance: textfield
+  -moz-appearance: textfield;
 }
 
 input {
-  padding: 0
+  padding: 0;
+  border-bottom: 1px solid #ccc; /* Тонка сіра лінія для вводу */
+}
+
+input:focus {
+  border-color: var(--hover-color);
+  outline: none;
 }
 
 .preloader {
@@ -128,5 +157,5 @@ input {
   display: flex;
   flex-grow: 1;
   justify-content: center;
-  padding: 24px
+  padding: 24px;
 }

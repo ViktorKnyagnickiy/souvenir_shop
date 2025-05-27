@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import styles from "./Footer.module.css";
+import styles from "../../styles/Footer.module.css";
 import { ROUTES } from "../../utils/routes";
 
 import LOGO from "../../images/logo6.png";
@@ -16,9 +16,8 @@ const Footer = () => (
 
     <div className={styles.rights}>
       Розроблено by{" "}
-      <a href="https://youtube.com/Tomkovich" target="_blank" rel="noreferrer">
-        Tomkovich
-      </a>
+      
+      Knyahnitskyi
     </div>
 
     <div className={styles.socials}>
