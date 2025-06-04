@@ -12,7 +12,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   const {
-    products: { list, filtered, isLoading: productsLoading },
+    products: { list, isLoading: productsLoading },
     categories: { list: categoriesList, isLoading: categoriesLoading },
   } = useSelector((state) => state);
 

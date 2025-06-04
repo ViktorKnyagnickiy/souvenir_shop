@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
-
 import { ROUTES } from "../../utils/routes";
-
 import styles from "../../styles/Product.module.css";
 
-
-
 const Product = (item) => {
-  const { title, price, image, description } = item;
-  const images = image ? [image] : [];
+  const { title, image, description } = item;
 
-
+  // Завдяки useMemo масив images не буде створюватися наново на кожному рендері
+  const images = useMemo(() => (image ? [image] : []), [image]);
 
   const [currentImage, setCurrentImage] = useState();
 
@@ -21,8 +17,6 @@ const Product = (item) => {
       setCurrentImage(images[0]);
     }
   }, [images]);
-
-  
 
   return (
     <section className={styles.product}>
@@ -34,7 +28,6 @@ const Product = (item) => {
       </div>
       <div className={styles.info}>
         <h1 className={styles.title}>{title}</h1>
-        
 
         <p className={styles.description}>{description}</p>
 
@@ -45,8 +38,6 @@ const Product = (item) => {
         </div>
 
         <div className={styles.bottom}>
-          
-
           <Link to={ROUTES.HOME}>Повернутись до магазину</Link>
         </div>
       </div>

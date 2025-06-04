@@ -5,7 +5,7 @@ import styles from "../../styles/Header.module.css";
 import { ROUTES } from '../../utils/routes';
 
 import LOGO from '../../images/logo6.png';
-import { ReactComponent as SearchIcon } from '../../images/search.svg';
+
 
 const Header = () => {
   return (
