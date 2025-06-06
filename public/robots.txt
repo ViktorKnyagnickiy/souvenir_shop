@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt для https://souvenir-shopkp.netlify.app
+
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: https://souvenir-shopkp.netlify.app/sitemap.xml
