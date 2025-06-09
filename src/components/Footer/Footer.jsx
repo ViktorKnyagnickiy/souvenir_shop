@@ -15,9 +15,7 @@ const Footer = () => (
     </div>
 
     <div className={styles.rights}>
-      Розроблено by{" "}
-      
-      Knyahnitskyi
+      "Виставка-продаж" (сувенірна крамничка)
     </div>
 
     <div className={styles.socials}>

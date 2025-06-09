@@ -13,6 +13,7 @@ const Header = () => {
         <div className={styles.logo}>
           <Link to={ROUTES.HOME}>
             <img src={LOGO} alt="Souvenir" />
+            
           </Link>
         </div>
 

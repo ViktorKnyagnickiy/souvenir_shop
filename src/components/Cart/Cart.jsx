@@ -8,6 +8,7 @@ const Cart = () => {
 
       <div className={styles.contactInfo}>
         <p>
+          <strong>"Виставка-продаж" (сувенірна крамничка)</strong> <br/>
           <strong>Номер телефону:</strong>{" "}
           <a href="tel:+380673814897">+380673814897</a> 
           <br/>
